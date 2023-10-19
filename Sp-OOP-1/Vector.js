@@ -10,8 +10,8 @@ class Vector {
     }
 
     subtract(other) {
-        this.x += other.x;
-        this.y += other.y;
+        this.x -= other.x;
+        this.y -= other.y;
     }
 
     sum(other) {
@@ -23,6 +23,6 @@ class Vector {
     }
 
     get squareSize() {
-        return this.x * other.x + this.y * other.y;
+        return this.x * this.x + this.y * this.y;
     }
 }

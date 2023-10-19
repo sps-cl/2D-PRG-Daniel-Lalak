@@ -5,15 +5,15 @@ class RectCollider extends Positionable{
         this.height = height;
     }
 
-    static collideWith(other) {
+    collideWith(other) {
         return other.collideWithRect(this);
     }
 
-    static collideWithRect(other) {
+    collideWithRect(other) {
         return CollisionDetection.checkRectCollision(this, other);
     }
 
-    static collideWithCircle(other) {
+    collideWithCircle(other) {
         return CollisionDetection.checkRectCircleCollision(this, other);
     }
 

@@ -11,7 +11,7 @@ class CollisionDetection {
 
     }
 
-    static checkRectCircleCollision(circle, rect) {
+    static checkRectCircleCollision(rect, circle) {
         let center = circle.center;
         let closePoint = new Vector(center.x, center.y);
         if (closePoint.x < rect.leftEdge) closePoint.x = rect.leftEdge;

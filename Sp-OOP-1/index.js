@@ -1,5 +1,5 @@
-const scene = new Scene(1000, 700);
-const background = new Background(scene.width, scene.height);
+let scene = new Scene(1000, 700);
+let background = new Background(scene.width, scene.height);
 scene.draw(background);
 let circle1 = new CircleCollider(new Vector(0, 0), 50);
 let circle2 = new CircleCollider(new Vector(50, 50), 70);
