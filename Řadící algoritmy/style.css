@@ -1,0 +1,24 @@
+:root{
+    --max-value: 20;
+}
+.container {
+    --item-count: 10;  
+    --container-width: 700px;
+    --container-height: 450px;
+    --item-width: calc(var(--container-width) / var(--item-count));
+    position: relative;
+    width: var(--container-width);
+    height: var(--container-height);
+    background-color: black;
+}
+.item {
+    --x: 0;
+    --value: 20;
+    height: calc(var(--container-height) * var(--value) / var(--max-value) - 1.5px);
+    position: absolute;
+    width: var(--item-width);
+    bottom: 0px;
+    background-color: white;
+    border: 1px solid black;
+    left: calc(var(--item-width) * var(--x));
+}
