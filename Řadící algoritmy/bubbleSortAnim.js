@@ -1,34 +1,29 @@
-class BubbleSortAnim extends SortAnim {
-    static sortAsc() {
-        async function sortAsc() {
-            for (let i = 0; i < this.values.length; i++) {
-                let swap = false;
-                let bound = this.values.length - i;
-                for (let j = 1; j < bound; j++) {
-                    setCompareColor(this.Columns[j - 1]);
-                    setCompareColor(this.Columns[j]);
-                    await sleep(300);
-                    setDefaultColor(this.Columns[j - 1]);
-                    setDefaultColor(this.Columns[j]);
-                    if (this.values[j - 1] > this.values[j]) {
-                        swap = true;
-                        swapValues(j - 1, j);
-                    }
-                    
+class BubblesortAnim extends SortAnim{
+    constructor(values, container){
+        super(values,container)
+
+    }
+    async sortAsc(){
+        for (var i = 0; i < this.values.length; i++) {
+            let swap = false;
+            let bound = this.values.length - i;
+            for (let j = 1; j < bound; j++) {
+                this.setCompareColor(this.columns[j - 1]);
+                this.setCompareColor(this.columns[j]);
+                await this.sleep(100);
+                this.setDefaultColor(this.columns[j - 1]);
+                this.setDefaultColor(this.columns[j]);
+                if (this.values[j -1] > this.values[j]){
+                    swap = true;
+                    this.swapValues(j - 1, j);
                 }
-                this.columns = new Array(values.length)
-        for (let i = 0; i < values.length; i++) {
-            let value = array[i];
-            let column = document.createElement("div");
-            column.style.setProperty("--x", i);
-            column.style.setProperty("--value", value);
-            column.className = "item";  
-            container.appendChild(column);
-            this.columns[i] = column;
-        }
-                setSortColor(this.Columns[bound - 1]);
-                if (!swap) return;
             }
+            this.setSortedColor(this.columns[bound - 1]);
+            if(!swap) break;
+        }
+        for (let index = 0; index < i; index++) {
+            this.setSortedColor(this.columns[index])
+            
         }
     }
 }
