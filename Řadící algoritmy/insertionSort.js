@@ -1,5 +1,5 @@
 class InsertionSort{
-    static sortAsc(array){
+    static sortAsc(array) {
         for (let i = 1; i < array.length; i++) {
             let j = i -1;
             while(j >= 0 && array[j] > array[j + 1]) {

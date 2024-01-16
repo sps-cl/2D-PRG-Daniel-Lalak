@@ -16,6 +16,7 @@ class SortAnim{
             this.columns[i] = column;
         }
     }
+    
     setCompareColor(div){
         div.style.backgroundColor = "green"
     }
@@ -24,6 +25,10 @@ class SortAnim{
     }
     setSortedColor(div){
         div.style.backgroundColor = "yellow"
+    }
+    setValue(i, value) {
+        this.values[i] = value
+        this.columns[i].style.setProperty("--value", value);
     }
     swapValues(i, j){
         [this.values[i], this.values[j]] = [this.values[j], this.values[i]];
