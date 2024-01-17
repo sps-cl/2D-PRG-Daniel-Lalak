@@ -18,13 +18,13 @@ class SortAnim{
     }
     
     setCompareColor(div){
-        div.style.backgroundColor = "green"
+        div.style.backgroundColor = "#7FEFBD" //barva prubehu
     }
     setDefaultColor(div){
-        div.style.backgroundColor = "white"
+        div.style.backgroundColor = "#FC744E" //barva pednacteni
     }
     setSortedColor(div){
-        div.style.backgroundColor = "yellow"
+        div.style.backgroundColor = "#FF0000" //hotova barva
     }
     setValue(i, value) {
         this.values[i] = value
