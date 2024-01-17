@@ -27,4 +27,4 @@ let qsa = new QuickSortAnim(array, quickSortContainer);
 let msa = new MergeSortAnim(array, mergeSortContainer);
 let csa = new CountingSortAnim(array, countingSortContainer);
 
-console.log(isa.sortAsc(), bsa.sortAsc(), ssa.sortAsc(), qsa.sortAsc(), msa.sortAsc());
+console.log(isa.sortAsc(), bsa.sortAsc(), ssa.sortAsc(), qsa.sortAsc(), msa.sortAsc(), csa.sortAsc());
