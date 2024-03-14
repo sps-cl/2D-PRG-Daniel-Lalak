@@ -11,8 +11,11 @@ let jumpImage = new Image();
 let jumpAnimation;
 let idleImage = new Image();
 let idleAnimation;
+walkImage.src = 'playerWalkSpriteSheet.png';
+jumpImage.src = 'playerJumpSpriteSheet.png';
+idleImage.src = 'playerIdleImage.png';
+let keysPressed = [];
 
-let keys = [];
 window.addEventListener('keydown', (event) => {
     keys[event.key.toLowerCase()] = true;
 });
@@ -20,9 +23,6 @@ window.addEventListener('keyup', (event) => {
     keys[event.key.toLowerCase()] = false;
 });
 
-if (keyPressed = ['d']) {
-    
-}
 walkImage.onload = function() {
     let frames = getFrames(walkImage, 12);
         walkAnimation = new FrameAnimation(frames);
@@ -46,20 +46,20 @@ idleImage.onload = function () {
 };
 
 let x = 0;
+let y = 100;
 function loop() {
     if (frame % this.frameInterval === 0) {
         context.clearRect(0, 0, canvas.width, canvas.height);
-        walkAnimation.draw(context, x, 100, 100, 100);
+        walkAnimation.draw(context, x, y, 100, 100);
     }
-    x++;
+
     frame++;
     requestAnimationFrame(loop);
+    if (keyPressed = ['d']) {
+        x += 1;
+    }
 }
 frame++;
-
-walkImage.src = 'playerWalkSpriteSheet.png';
-jumpImage.src = 'playerJumpSpriteSheet.png';
-idleImage.src = 'playerIdleImage.png';
 
 function getFrames(image, frameCount) {
     let linkedList = new LinkedList();
