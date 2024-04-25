@@ -80,16 +80,21 @@ function loop(){
         idle = false;
         walk = true;
     }
-    if (keysPressed[' ']){
-        animationY -=5;
+    if (keysPressed[' ']) {
+        animationY -=3;
         jump = true;
         idle = false;
         walk = false;
     }
-    if (nothingPressed == true) {
-        if(animationY < 600){
-        animationY += 3;                   
-    }else animationY = 600;
+
+    if (keysPressed['a'] && keysPressed['d']) {
+        jump = false;
+        idle = true;
+        walk = false;
+    }
+
+    if (animationY < 600 && !keysPressed[' ']) {
+        animationY = 600;
     }
 }
 
